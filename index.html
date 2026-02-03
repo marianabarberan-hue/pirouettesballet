@@ -5,99 +5,120 @@
   <title>Pirouettes Ballet | Academia de Ballet en Barquisimeto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pirouettes Ballet. Academia de ballet en Barquisimeto. Clases para niñas, adolescentes y adultas. Reserva por WhatsApp.">
+
+  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap');
-body{
-  font-family:'Poppins', sans-serif;
-}
-h1,h2,h3{
-  font-family:'Playfair Display', serif;
-}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#fff0f6,#fdfcff);
+      color:#333;
+    }
 
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#fff0f6,#fdfcff);
-  color:#333;
-}
+    h1,h2,h3{
+      font-family:'Playfair Display',serif;
+      margin:0 0 10px 0;
+    }
 
-header{
-  background:
-    linear-gradient(120deg,rgba(236,72,153,.85),rgba(124,58,237,.85)),
-    url("images/salon.jpg") center/cover;
-}
+    header{
+      background:
+        linear-gradient(120deg,rgba(236,72,153,.85),rgba(124,58,237,.85)),
+        url("images/salon.jpg") center/cover;
+      color:white;
+      padding:90px 20px 70px;
+      text-align:center;
+    }
 
-}
+    .logo{
+      width:140px;
+      margin:0 auto 14px;
+      display:block;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
+    }
 
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:56px;
-  margin:0;
-}
+    header p{
+      margin:8px 0 0 0;
+      opacity:.95;
+      font-size:16px;
+    }
 
-h2{
-  font-family:'Playfair Display',serif;
-  color:#7c3aed;
-}
+    .btn{
+      background:linear-gradient(135deg,#ec4899,#7c3aed);
+      color:white;
+      padding:16px 28px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      margin-top:22px;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+    }
 
-.btn{
-  background:linear-gradient(135deg,#ec4899,#7c3aed);
-  color:white;
-  padding:16px 28px;
-  border-radius:40px;
-  text-decoration:none;
-  font-weight:600;
-  display:inline-block;
-  margin-top:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:70px 20px;
+    }
 
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px;
-}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-top:22px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
+    .card{
+      background:white;
+      padding:22px;
+      border-radius:24px;
+      box-shadow:0 20px 40px rgba(0,0,0,.08);
+      transition:.25s;
+    }
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:24px;
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-  transition:.3s;
-}
+    .card:hover{ transform:translateY(-6px); }
 
-.card:hover{
-  transform:translateY(-8px);
-}
+    .card img{
+      width:100%;
+      border-radius:18px;
+      display:block;
+      margin-bottom:14px;
+    }
 
-img{
-  width:100%;
-  border-radius:20px;
-}
+    footer{
+      background:#1f1f2e;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
 
-footer{
-  background:#1f1f2e;
-  color:white;
-  text-align:center;
-  padding:40px;
-}
-</style>
+    footer a{ color:white; }
 
+    /* Botón flotante WhatsApp */
+    .wa-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:14px 18px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 10px 25px rgba(0,0,0,.3);
+      z-index:999;
+    }
+  </style>
+</head>
 
 <body>
 
 <header>
+  <img class="logo" src="images/logo.jpg" alt="Pirouettes Ballet Logo">
   <h1>Pirouettes Ballet</h1>
   <p>Academia de ballet en Barquisimeto</p>
+
   <a class="btn" href="https://wa.me/584245668145">Reserva tu clase por WhatsApp</a>
 </header>
 
@@ -110,31 +131,25 @@ footer{
 </section>
 
 <section>
-<section>
-<h2>Nuestras clases</h2>
-<div class="grid">
-  <div class="card">
-    <img src="images/clase1.jpg">
-    <h3>Infantil</h3>
-  </div>
-  <div class="card">
-    <img src="images/clase2.jpg">
-    <h3>Juvenil</h3>
-  </div>
-  <div class="card">
-    <img src="images/salon.jpg">
-    <h3>Instalaciones</h3>
-  </div>
-</div>
-</section>
-
-
-<section>
-  <h2>Galería</h2>
+  <h2>Nuestras clases</h2>
   <div class="grid">
-    <img src="images/clase1.jpg">
-    <img src="images/clase2.jpg">
-    <img src="images/salon.jpg">
+    <div class="card">
+      <img src="images/clase1.jpg" alt="Clase infantil">
+      <h3>Infantil</h3>
+      <p>Desde los 4 años. Desarrollo motor, coordinación y musicalidad.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/clase2.jpg" alt="Clase juvenil">
+      <h3>Juvenil</h3>
+      <p>Técnica clásica, barra, centro, saltos y giros.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/clase3.jpg" alt="Instalaciones">
+      <h3>Instalaciones</h3>
+      <p>Espacio cómodo para entrenar con seguridad y enfoque.</p>
+    </div>
   </div>
 </section>
 
@@ -145,7 +160,7 @@ footer{
     Club Italo Venezolano, Barquisimeto<br>
     📞 +58 424-5668145
   </p>
-  <a class="btn" href="https://www.google.com/maps?q=Club%20Italo%20Venezolano%20Barquisimeto">
+  <a class="btn" href="https://www.google.com/maps?q=Club%20Italo%20Venezolano%20Barquisimeto" target="_blank">
     Ver en Google Maps
   </a>
 </section>
@@ -157,28 +172,15 @@ footer{
 </section>
 
 <footer>
-  <p>Síguenos en Instagram: 
+  <p>Síguenos en Instagram:
     <a href="https://instagram.com/pirouettesballet" target="_blank">@pirouettesballet</a>
   </p>
   <p>© 2026 Pirouettes Ballet</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/584245668145"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-z-index:999;">
-WhatsApp
-</a>
+<a class="wa-float" href="https://wa.me/584245668145">WhatsApp</a>
 
 </body>
 </html>
+
+
