@@ -1,186 +1,397 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Pirouettes Ballet | Academia de Ballet en Barquisimeto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pirouettes Ballet. Academia de ballet en Barquisimeto. Clases para niñas, adolescentes y adultas. Reserva por WhatsApp.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pirouettes Ballet | Barquisimeto</title>
+  <meta name="description" content="Academia de ballet en Barquisimeto. Programas por edades, clases para niñas, jóvenes y adultas. Reserva por WhatsApp." />
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root{
+      --bg:#fff7fb;
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --border:rgba(31,41,55,.10);
+      --accent:#7c3aed;
+      --accent2:#ec4899;
+      --shadow: 0 18px 45px rgba(17,24,39,.10);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:'Poppins',sans-serif;
-      background:linear-gradient(180deg,#fff0f6,#fdfcff);
-      color:#333;
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--ink);
+      background: radial-gradient(900px 350px at 15% 0%, rgba(236,72,153,.18), transparent 55%),
+                  radial-gradient(900px 350px at 85% 0%, rgba(124,58,237,.16), transparent 55%),
+                  linear-gradient(180deg, var(--bg), #fff);
     }
+    a{color:inherit}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
 
-    h1,h2,h3{
-      font-family:'Playfair Display',serif;
-      margin:0 0 10px 0;
+    /* Top nav */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
     }
-
-    header{
-      background:
-        linear-gradient(120deg,rgba(236,72,153,.85),rgba(124,58,237,.85)),
-        url("images/salon.jpg") center/cover;
-      color:white;
-      padding:90px 20px 70px;
-      text-align:center;
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:12px 0;
     }
-
-    .logo{
-      width:140px;
-      margin:0 auto 14px;
-      display:block;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
-    }
-
-    header p{
-      margin:8px 0 0 0;
-      opacity:.95;
-      font-size:16px;
-    }
-
+    .brand{display:flex; align-items:center; gap:12px; min-width:220px}
+    .brand img{width:44px;height:44px;object-fit:contain;border-radius:12px;background:#fff;box-shadow:0 10px 22px rgba(0,0,0,.08);padding:6px}
+    .brand b{font-family:"Playfair Display",serif; font-size:18px; letter-spacing:.2px}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:center}
+    .links a{font-size:14px; text-decoration:none; color:var(--muted)}
+    .links a:hover{color:var(--ink)}
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
     .btn{
-      background:linear-gradient(135deg,#ec4899,#7c3aed);
-      color:white;
-      padding:16px 28px;
-      border-radius:40px;
-      text-decoration:none;
-      font-weight:600;
-      display:inline-block;
-      margin-top:22px;
-      box-shadow:0 10px 25px rgba(0,0,0,.2);
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px; border-radius:999px;
+      border:1px solid var(--border); background:#fff;
+      text-decoration:none; font-weight:600; font-size:14px;
+    }
+    .btn.primary{
+      border-color:transparent;
+      background:linear-gradient(135deg,var(--accent2),var(--accent));
+      color:#fff;
+      box-shadow: var(--shadow);
     }
 
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:70px 20px;
+    /* Hero */
+    header.hero{
+      position:relative;
+      padding:54px 0 28px;
     }
-
-    .grid{
+    .heroGrid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:30px;
-      margin-top:22px;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
     }
-
-    .card{
-      background:white;
-      padding:22px;
-      border-radius:24px;
-      box-shadow:0 20px 40px rgba(0,0,0,.08);
-      transition:.25s;
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.72);
+      color:var(--muted);
+      font-size:13px;
     }
+    h1{
+      font-family:"Playfair Display",serif;
+      font-size:52px;
+      line-height:1.05;
+      letter-spacing:-.7px;
+      margin:14px 0 10px;
+    }
+    .lead{color:var(--muted); font-size:16px; line-height:1.65; max-width:60ch; margin:0}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
 
-    .card:hover{ transform:translateY(-6px); }
-
-    .card img{
-      width:100%;
+    .heroPhoto{
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      overflow:hidden;
+      min-height:360px;
+      position:relative;
+      background:
+        linear-gradient(120deg,rgba(236,72,153,.62),rgba(124,58,237,.62)),
+        url("images/salon.jpg") center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+    .heroPhoto .badge{
+      position:absolute; left:14px; right:14px; bottom:14px;
       border-radius:18px;
-      display:block;
-      margin-bottom:14px;
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      padding:14px;
     }
+    .badge b{display:block}
+    .badge span{display:block; color:var(--muted); font-size:13px; margin-top:4px}
 
+    /* Sections */
+    section{padding:34px 0}
+    .sectionTitle{display:flex; align-items:flex-end; justify-content:space-between; gap:14px; margin-bottom:12px}
+    h2{
+      font-family:"Playfair Display",serif;
+      margin:0;
+      font-size:26px;
+    }
+    .hint{color:var(--muted); font-size:14px; line-height:1.5}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .card img{width:100%; height:180px; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px}
+    .card h3{font-family:"Playfair Display",serif; margin:0 0 6px; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px; line-height:1.6}
+    .pillRow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .pill{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#fff; color:var(--muted)}
+
+    /* Highlight band */
+    .band{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.70));
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      align-items:center;
+    }
+    .band b{font-family:"Playfair Display",serif; font-size:22px}
+    .band p{margin:6px 0 0; color:var(--muted); line-height:1.6}
+    .band .mini{display:flex; gap:10px; justify-content:flex-end; flex-wrap:wrap}
+
+    /* Testimonials */
+    .quote{
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:#fff;
+      box-shadow: var(--shadow);
+    }
+    .quote p{margin:0; color:var(--muted); line-height:1.65}
+    .quote b{display:block; margin-top:10px; font-family:"Playfair Display",serif}
+
+    /* Footer */
     footer{
-      background:#1f1f2e;
-      color:white;
-      text-align:center;
-      padding:40px 20px;
+      margin-top:10px;
+      background:#151528;
+      color:#fff;
+      padding:34px 0;
+    }
+    footer a{color:#fff}
+    .footGrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; align-items:start}
+    .small{color:rgba(255,255,255,.78); font-size:13px; line-height:1.6}
+
+    /* WhatsApp floating */
+    .wa{
+      position:fixed; right:18px; bottom:18px; z-index:999;
+      background:#25D366; color:#fff; text-decoration:none;
+      padding:14px 18px; border-radius:999px; font-weight:700;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
     }
 
-    footer a{ color:white; }
-
-    /* Botón flotante WhatsApp */
-    .wa-float{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:white;
-      padding:14px 18px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 10px 25px rgba(0,0,0,.3);
-      z-index:999;
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      h1{font-size:40px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .band{grid-template-columns:1fr}
+      .band .mini{justify-content:flex-start}
+      .links{display:none;} /* simplifica móvil */
     }
   </style>
 </head>
 
 <body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <img src="images/logo.jpg" alt="Logo Pirouettes Ballet">
+          <b>Pirouettes Ballet</b>
+        </div>
 
-<header>
-  <img class="logo" src="images/logo.jpg" alt="Pirouettes Ballet Logo">
-  <h1>Pirouettes Ballet</h1>
-  <p>Academia de ballet en Barquisimeto</p>
+        <nav class="links" aria-label="Navegación">
+          <a href="#programas">Programas</a>
+          <a href="#metodo">Método</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
 
-  <a class="btn" href="https://wa.me/584245668145">Reserva tu clase por WhatsApp</a>
-</header>
-
-<section>
-  <h2>Sobre nosotros</h2>
-  <p>
-    En Pirouettes Ballet formamos bailarinas con técnica, disciplina y amor por el arte.
-    Ofrecemos clases para niñas, adolescentes y adultas en un ambiente profesional y cercano.
-  </p>
-</section>
-
-<section>
-  <h2>Nuestras clases</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="images/clase1.jpg" alt="Clase infantil">
-      <h3>Infantil</h3>
-      <p>Desde los 4 años. Desarrollo motor, coordinación y musicalidad.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/clase2.jpg" alt="Clase juvenil">
-      <h3>Juvenil</h3>
-      <p>Técnica clásica, barra, centro, saltos y giros.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/clase3.jpg" alt="Instalaciones">
-      <h3>Instalaciones</h3>
-      <p>Espacio cómodo para entrenar con seguridad y enfoque.</p>
+        <div class="actions">
+          <a class="btn" href="https://instagram.com/pirouettesballet" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn primary" href="https://wa.me/584245668145?text=Hola%20quiero%20información%20sobre%20clases%20de%20ballet" target="_blank" rel="noopener">Clase de prueba</a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<section>
-  <h2>Ubicación</h2>
-  <p>
-    📍 Av. Herman Garmendia, Vía El Ujano<br>
-    Club Italo Venezolano, Barquisimeto<br>
-    📞 +58 424-5668145
-  </p>
-  <a class="btn" href="https://www.google.com/maps?q=Club%20Italo%20Venezolano%20Barquisimeto" target="_blank">
-    Ver en Google Maps
+  <header class="hero">
+    <div class="wrap">
+      <div class="heroGrid">
+        <div>
+          <span class="kicker">Ballet clásico · Técnica · Arte · Disciplina</span>
+          <h1>Una academia donde el ballet se aprende con rigor y belleza.</h1>
+          <p class="lead">
+            Programas por edades y niveles. Grupos cuidados, atención real y progresión.
+            Estamos en el Club Italo Venezolano, Barquisimeto.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="https://wa.me/584245668145?text=Hola%20quiero%20reservar%20una%20clase%20de%20prueba" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+            <a class="btn" href="#programas">Ver programas</a>
+          </div>
+        </div>
+
+        <div class="heroPhoto" role="img" aria-label="Estudio de ballet">
+          <div class="badge">
+            <b>Barquisimeto · Club Italo Venezolano</b>
+            <span>Av. Herman Garmendia, Vía El Ujano · +58 424-5668145</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="programas">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Programas</h2>
+          <div class="hint">Estructura por edades y niveles (puedes ajustar edades).</div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <img src="images/clase1.jpg" alt="Clase infantil">
+            <h3>Preballet</h3>
+            <p>Desde 3–5 años. Coordinación, ritmo, postura y bases de forma lúdica.</p>
+            <div class="pillRow">
+              <span class="pill">Iniciación</span><span class="pill">Musicalidad</span><span class="pill">Motricidad</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/clase2.jpg" alt="Clase niños">
+            <h3>Niñas / Niños</h3>
+            <p>6–11 años. Técnica, colocación y disciplina con progresión segura.</p>
+            <div class="pillRow">
+              <span class="pill">Técnica</span><span class="pill">Postura</span><span class="pill">Progresión</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/clase3.jpg" alt="Clase jóvenes">
+            <h3>Jóvenes y Adultas</h3>
+            <p>Niveles desde cero hasta avanzado. Fuerza, flexibilidad y control corporal.</p>
+            <div class="pillRow">
+              <span class="pill">Principiantes</span><span class="pill">Intermedio</span><span class="pill">Avanzado</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo">
+      <div class="wrap">
+        <div class="band">
+          <div>
+            <b>Metodología y acompañamiento</b>
+            <p>Clases estructuradas, correcciones claras y objetivos por nivel. Buscamos progreso real sin perder la parte artística.</p>
+          </div>
+          <div class="mini">
+            <a class="btn" href="#contacto">Pedir información</a>
+            <a class="btn primary" href="https://wa.me/584245668145?text=Hola%20quiero%20información%20sobre%20horarios%20y%20niveles" target="_blank" rel="noopener">Consultar horarios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Galería</h2>
+          <div class="hint">Fotos reales (puedes sustituirlas cuando quieras).</div>
+        </div>
+
+        <div class="grid3">
+          <div class="card"><img src="images/clase1.jpg" alt="Foto 1"></div>
+          <div class="card"><img src="images/clase2.jpg" alt="Foto 2"></div>
+          <div class="card"><img src="images/salon.jpg" alt="Foto 3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Contacto</h2>
+          <div class="hint">Respuesta rápida por WhatsApp.</div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Dirección</h3>
+            <p>
+              Av. Herman Garmendia, Vía El Ujano<br>
+              Club Italo Venezolano, Barquisimeto<br>
+              Tel: +58 424-5668145
+            </p>
+            <div class="pillRow">
+              <a class="btn" href="https://www.google.com/maps?q=Club%20Italo%20Venezolano%20Barquisimeto" target="_blank" rel="noopener">Google Maps</a>
+              <a class="btn primary" href="https://wa.me/584245668145" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Instagram</h3>
+            <p>Publicamos novedades, clases y eventos.</p>
+            <div class="pillRow">
+              <a class="btn primary" href="https://instagram.com/pirouettesballet" target="_blank" rel="noopener">@pirouettesballet</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="grid3">
+          <div class="quote">
+            <p>“Ambiente hermoso y mucha atención a la técnica. Se nota el progreso.”</p>
+            <b>Madre de alumna</b>
+          </div>
+          <div class="quote">
+            <p>“Empecé desde cero y me siento más fuerte y con mejor postura.”</p>
+            <b>Alumna adulta</b>
+          </div>
+          <div class="quote">
+            <p>“Clases estructuradas y muy motivadoras. Excelente experiencia.”</p>
+            <b>Representante</b>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footGrid">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <img src="images/logo.jpg" alt="Logo Pirouettes Ballet" style="width:42px;height:42px;object-fit:contain;border-radius:12px;background:#fff;padding:6px">
+            <div>
+              <div style="font-family:'Playfair Display',serif;font-weight:800;font-size:18px">Pirouettes Ballet</div>
+              <div class="small">Academia de ballet · Barquisimeto</div>
+            </div>
+          </div>
+          <p class="small" style="margin-top:10px">Av. Herman Garmendia, Vía El Ujano, Club Italo Venezolano.</p>
+        </div>
+
+        <div>
+          <div class="small" style="margin-bottom:10px"><b>Contacto</b></div>
+          <div class="small">WhatsApp: +58 424-5668145</div>
+          <div class="small">Instagram: @pirouettesballet</div>
+        </div>
+      </div>
+      <div class="small" style="margin-top:16px">© 2026 Pirouettes Ballet</div>
+    </div>
+  </footer>
+
+  <a class="wa" href="https://wa.me/584245668145?text=Hola%20quiero%20información%20sobre%20clases%20de%20ballet" target="_blank" rel="noopener">
+    WhatsApp
   </a>
-</section>
-
-<section>
-  <h2>Contacto</h2>
-  <p>Escríbenos directamente por WhatsApp:</p>
-  <a class="btn" href="https://wa.me/584245668145">Hablar por WhatsApp</a>
-</section>
-
-<footer>
-  <p>Síguenos en Instagram:
-    <a href="https://instagram.com/pirouettesballet" target="_blank">@pirouettesballet</a>
-  </p>
-  <p>© 2026 Pirouettes Ballet</p>
-</footer>
-
-<a class="wa-float" href="https://wa.me/584245668145">WhatsApp</a>
-
 </body>
 </html>
-
-
