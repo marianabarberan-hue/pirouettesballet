@@ -14,7 +14,6 @@
   <style>
     :root{
       --bg:#0b0b0f;
-      --panel:#12121a;
       --ink:#ffffff;
       --muted:rgba(255,255,255,.72);
       --border:rgba(255,255,255,.12);
@@ -123,6 +122,7 @@
     .lead{color:var(--muted); font-size:16px; line-height:1.65; max-width:60ch; margin:0}
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
 
+    /* HERO CON LOGO COMO FONDO (watermark) */
     .heroPhoto{
       border-radius:var(--radius);
       border:1px solid var(--border);
@@ -130,8 +130,8 @@
       min-height:360px;
       position:relative;
       background:
-        linear-gradient(120deg,rgba(0,0,0,.30),rgba(0,0,0,.55)),
-        url("images/salon.jpg") center/cover no-repeat;
+        linear-gradient(120deg,rgba(0,0,0,.60),rgba(0,0,0,.80)),
+        url("images/logo.jpg") center/55% no-repeat;
       box-shadow: var(--shadow);
     }
     .heroPhoto .badge{
@@ -240,7 +240,7 @@
           </div>
         </div>
 
-        <div class="heroPhoto" role="img" aria-label="Estudio de ballet">
+        <div class="heroPhoto" role="img" aria-label="Marca Pirouettes Ballet">
           <div class="badge">
             <b>Barquisimeto · Club Italo Venezolano</b>
             <span>Av. Herman Garmendia, Vía El Ujano · +58 424-5668145</span>
